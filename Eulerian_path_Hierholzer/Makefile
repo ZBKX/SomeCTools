@@ -15,6 +15,7 @@ A_TARGET=$(LIB)/libsrc.a
 SO_TARGET=$(patsubst %.a,%.so,$(A_TARGET))
 
 all:build $(A_TARGET) $(SO_TARGET) main
+	mkdir -p tests bin
 	@echo "-----------all-Done-----------"
 
 $(A_TARGET):CFLAGS += -fPIC
